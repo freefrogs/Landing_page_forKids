@@ -1,3 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Flavors&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+/* --CLEARFIX-- */
+.row::before,
+.row::after {
+	content: "";
+	display: table;
+	clear: both; }
+
+
 body {
 	font-family: 'Flavors', cursive;
+	margin: 0;
+	padding: 0;
+	background: #9ed2cf;
+
 }
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.container {
+	max-width: 1600px;
+	width: 100%;
+	margin: 1% auto;
+}
+
+header {
+	position: relative;
+}
+
+.logo {
+	width: 25%;
+	margin: 0;
+	padding: 2% 0 2% 4%;
+}
+
+nav {
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0px 0px 20px 0px rgba(72,34,71,0.57);
+	border-radius: 20px 20px 0 0;
+	background: linear-gradient(172deg, #c95392 25%, #9ed2cf 55%);
+}
+
+nav ul {
+	list-style: none;
+	display: inline-block;
+	float: right;
+	width: 65%;
+}
+
+nav ul li {
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 11% 4% 15%;
+	transition: .5s;
+	height: 100%;
+}
+
+nav ul li a {
+	color: #4d1a4b;
+	font-size: 28px;
+	margin: 0 auto;
+	padding: 40% 0;
+	transition: .5s;
+
+}
+
+nav ul .nav_li:hover  {
+	padding-top: 15%;
+}
+
+nav ul .nav_li a:hover {
+	color: #fff;
+}
+
+.fairy_tales {
+	background: #ffe556;
+	border-radius: 20px 0 0 0;
+}
+
+.games {
+	background: #fa916e;
+}
+
+.drawings {
+	background: #c086c4;
+}
+
+.shop {
+	background: #35c8cc;
+	border-radius: 0 20px 0 0;
+}
+
+.fairy_tales:hover ~ .hero {
+	background: #ffe556;
+}
+
+.games:hover ~ .hero {
+	background: #fa916e;
+}
+
+.drawings:hover ~ .hero {
+	background: #c086c4;
+}
+
+.shop:hover ~ .hero {
+	background: #35c8cc;
+}
+
+.hero {
+	background: #9ed2cf;
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 99%;
+	left: 0;
+	height: 30vh;
+	transition: .5s;
+}
+
