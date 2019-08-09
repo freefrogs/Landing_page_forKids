@@ -1,8 +1,81 @@
 @import url('https://fonts.googleapis.com/css?family=Flavors&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Irish+Grover&display=swap');
 
 * {
 	box-sizing: border-box;
 }
+
+/* --KEYFRAMES-- */
+@keyframes shake-lr {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+
+@keyframes shake-bottom {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes color-change-4x {
+  0% {
+    background: #ffe556;
+  }
+  33.3333% {
+    background: #fa916e;
+  }
+  66.666% {
+    background: #c086c4;
+  }
+  100% {
+    background: #35c8cc;
+  }
+}
+
 
 /* --CLEARFIX-- */
 .row::before,
@@ -14,15 +87,17 @@
 
 body {
 	font-family: 'Flavors', cursive;
+	/*font-family: 'Irish Grover', cursive;*/
 	margin: 0;
 	padding: 0;
-	background: #9ed2cf;
+	animation: color-change-4x 15s linear infinite alternate both;
 
 }
 
 a {
 	text-decoration: none;
 	text-transform: uppercase;
+	/*letter-spacing: 2px;*/
 }
 
 .container {
@@ -39,6 +114,12 @@ header {
 	width: 25%;
 	margin: 0;
 	padding: 2% 0 2% 4%;
+	/*animation: shake-lr 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;*/
+	animation: shake-bottom 4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+.logo:hover {
+	transform: scale(2);
 }
 
 nav {
@@ -60,7 +141,7 @@ nav ul li {
 	display: inline-block;
 	float: left;
 	margin: 0;
-	padding: 11% 4% 15%;
+	padding: 12% 5% 15%;
 	transition: .5s;
 	height: 100%;
 }
@@ -121,9 +202,39 @@ nav ul .nav_li a:hover {
 	display: block;
 	position: absolute;
 	width: 100%;
-	top: 99%;
+	top: 95%;
 	left: 0;
 	height: 30vh;
 	transition: .5s;
 }
 
+@media (max-width: 1400px) {
+	nav {
+		width: 85%;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	nav ul li {
+		padding-left: 4%;
+		padding-right: 4%;
+	}
+}
+
+@media (max-width: 1000px) {
+	nav ul {
+		width: 70%;
+	}
+	nav ul li a {
+		font-size: 24px;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+
+@media (max-width: 850px) {
+	nav ul {
+		display: none;
+	}
+}
