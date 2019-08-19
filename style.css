@@ -110,6 +110,7 @@ header {
 	position: relative;
 }
 
+/* --BASIC NAV-- */
 .logo {
 	width: 25%;
 	margin: 0;
@@ -132,13 +133,16 @@ nav {
 
 nav ul {
 	list-style: none;
+}
+
+nav .main_menu {
 	display: inline-block;
 	float: right;
 	width: 65%;
 	z-index: 3;
 }
 
-nav ul li {
+nav .main_menu li {
 	display: inline-block;
 	float: left;
 	margin: 0;
@@ -147,7 +151,7 @@ nav ul li {
 	height: 100%;
 }
 
-nav ul li a {
+nav .main_menu li a {
 	color: #4d1a4b;
 	font-size: 28px;
 	margin: 0 auto;
@@ -156,7 +160,7 @@ nav ul li a {
 
 }
 
-nav ul li:hover  {
+nav .main_menu li:hover  {
 	padding-top: 15%;
 }
 
@@ -166,7 +170,6 @@ nav ul li a:hover {
 
 .fairy_tales {
 	background: #ffe556;
-	border-radius: 20px 0 0 0;
 }
 
 .games {
@@ -179,20 +182,164 @@ nav ul li a:hover {
 
 .shop {
 	background: #35c8cc;
+}
+
+nav .main_menu .fairy_tales {
+	border-radius: 20px 0 0 0;
+}
+
+nav .main_menu .shop {
 	border-radius: 0 20px 0 0;
 }
 
+/* --HAMBURGER MENU-- */
+nav .hamburger {
+	display: none;
+	position: fixed;
+	z-index: 11;
+    top: 0;
+    right: 0;
+    animation: color-change-4x 10s linear infinite alternate both;
+    width: 100px;
+    height: 100px;
+    border-bottom-left-radius: 100%;
+}
+
+nav .hamburger .menu {
+	z-index: 12;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80px;
+	height: 80px;
+	border-bottom-left-radius: 100%;
+}
+
+nav .hamburger .menu .open {
+	background: #fff;
+	position: fixed;
+	z-index: 13;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	display: block;
+	cursor: pointer;
+	transition: opacity 0.2s linear;
+	opacity: 0.5;
+	border-bottom-left-radius: 100%;
+}
+
+nav .hamburger .menu .open:hover {
+	opacity: 0.9;
+}
+
+nav .hamburger span {
+	display: block;
+	float: left;
+	clear: both;
+	height: 4px;
+	width: 20px;
+	border-radius: 20px;
+	background: #4d1a4b;
+	position: absolute;
+	right: 10px;
+	top: 2px;
+	transition: all 0.4s ease;
+}
+
+nav .hamburger span:nth-child(1) {
+	margin-top: 10px;
+}
+
+nav .hamburger span:nth-child(2) {
+	margin-top: 17px;
+}
+
+nav .hamburger span:nth-child(3) {
+	margin-top: 24px;
+}
+
+nav .hamburger .menu .open span .sub-menu {
+	transition: all 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	height: 0;
+	width: 0;
+	right: 0;
+	top: -10px;
+	position: absolute;
+	border-left: 4px solid #fff;
+	border-bottom-left-radius: 100%;
+	overflow: hidden;
+}
+
+nav .hamburger .menu .open span .sub-menu li {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: block;
+	float: right;
+	clear: both;
+	padding: 7px;
+	width: 120px;
+	border-radius: 10px;
+}
+
+nav .hamburger .menu .open span .sub-menu li:hover {
+		box-shadow: 0px 0px 5px 0px #fff;
+}
+
+nav .hamburger .menu .open span .sub-menu li i {
+	padding-right: 5px;
+}
+
+nav .hamburger .menu .open span .sub-menu li:nth-child(2) {
+	top: 50px;
+	left: 30px;
+}
+
+nav .hamburger .menu .open span .sub-menu li:nth-child(3) {
+	top: 90px;
+	left: 50px;
+}
+
+nav .hamburger .menu .open span .sub-menu li:nth-child(4) {
+	top: 130px;
+	left: 80px;
+}
+
+nav .hamburger .menu .openned span .sub-menu {
+	height: 250px;
+	width: 250px;
+}
+
+nav .hamburger .menu .openned span:nth-child(1), nav .hamburger .menu .openned span:nth-child(3) {
+	display: none;
+}
+
+nav .hamburger .menu .openned span:nth-child(2) {
+	border-radius: 50%;
+	margin-top: 10px;
+	border: 5px solid #4d1a4b;
+	background: none;
+	height: 20px;
+	width: 20px;
+}
+
+/* --HERO-- */
 .hero {
+	transition-duration: 0.6s;
 	background: #9ed2cf;
-	box-shadow: 0px 23px 20px 0px rgba(72,34,71,0.57);
+	box-shadow: 0px 23px 20px 0px rgba(72,34,71,0.6);
 	height: 55vh;
 	margin: -10px auto 0;
 	width: 80%;
-	z-index: 10;
+	z-index: 2;
 	position: relative;
 }
 
 
+/* --RWD-- */
 @media (max-width: 1400px) {
 	nav {
 		width: 85%;
@@ -204,17 +351,17 @@ nav ul li a:hover {
 
 
 @media (max-width: 1200px) {
-	nav ul li {
+	nav .main_menu li {
 		padding-left: 4%;
 		padding-right: 4%;
 	}
 }
 
 @media (max-width: 1000px) {
-	nav ul {
+	nav .main_menu {
 		width: 70%;
 	}
-	nav ul li a {
+	nav .main_menu li a {
 		font-size: 24px;
 		padding-left: 3%;
 		padding-right: 3%;
@@ -222,7 +369,43 @@ nav ul li a:hover {
 }
 
 @media (max-width: 850px) {
-	nav ul {
+	nav .main_menu {
 		display: none;
+	}
+	nav .hamburger {
+		display: block;
+	}
+	.logo {
+		width: 45%;
+	}
+	nav {
+		margin-top: 4%;
+	}
+}
+
+@media (max-width: 500px) {
+	.logo {
+		width: 35%;
+	}
+	.hero {
+		margin-top: -5px;
+	}
+	nav .hamburger .menu .openned span .sub-menu {
+		height: 180px;
+		width: 180px;
+	}
+	nav .hamburger .menu .open span .sub-menu li {
+		font-size: 12px;
+		padding: 4px;
+		width: 85px;
+	}
+	nav .hamburger .menu .open span .sub-menu li:nth-child(2) {
+		top: 45px;
+	}
+	nav .hamburger .menu .open span .sub-menu li:nth-child(3) {
+		top: 80px;
+	}
+	nav .hamburger .menu .open span .sub-menu li:nth-child(4) {
+		top: 115px;
 	}
 }

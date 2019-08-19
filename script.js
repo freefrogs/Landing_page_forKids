@@ -13,6 +13,18 @@ window.onload = function() {
 		});
 	}
 
-	
+	// Hamburger menu
+	$(document).delegate('.open', 'click', function(event){
+		$(this).addClass('openned');
+		event.stopPropagation();
+	})
+	$(document).delegate('body', 'click', function(event) {
+		$('.open').removeClass('openned');
+	})
+	$(document).delegate('.cls', 'click', function(event){
+		$('.open').removeClass('openned');
+		event.stopPropagation();
+	});
+		
 }
 

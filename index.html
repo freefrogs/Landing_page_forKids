@@ -4,24 +4,47 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Trusiaczki nav</title>
-		<link href="https://fonts.googleapis.com/css?family=Flavors&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<header class="container">
 			<nav>
 				<a href="#"><img src="img/logo_T.png" class="logo logo_b" alt="logo"></a>
-				<ul>
+				<ul class="main_menu">
 					<li class="fairy_tales nav_color"><a href="#">bajki</a></li>
 					<li class="games nav_color"><a href="#">gry</a></li>
 					<li class="drawings nav_color"><a href="#">rysowanki</a></li>
 					<li class="shop nav_color"><a href="#">sklep</a></li>
 				</ul>
+				<div class="hamburger">
+					<div class="menu">
+						<div class="open">
+							<span></span>
+							<span class="cls">
+								<ul class="sub-menu">
+									<li class="fairy_tales nav_color"><a href="#"><i class="fa fa-book"></i>bajki</a></li>
+									<li class="games nav_color"><a href="#"><i class="fa fa-gamepad"></i>gry</a></li>
+									<li class="drawings nav_color"><a href="#"><i class="fa fa-pencil"></i>rysowanki</a></li>
+									<li class="shop nav_color"><a href="#"><i class="fa fa-gift"></i>sklep</a></li>
+								</ul>
+							</span>
+							<span></span>
+						</div>
+					</div>
+				</div>
 			</nav>
-			<div class="hero" id="hero"><div>
+			<div class="hero" id="hero">
+				<div class="main_hero"></div>
+				<div class="fairy_tales_hero"></div>
+				<div class="games_hero"></div>
+				<div class="drawings_hero"></div>
+				<div class="shop_hero"></div>
+			<div>
 		</header>
 		<footer>
 		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 		<script src="script.js"></script>
 	</body>
 </html>
