@@ -400,7 +400,103 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	padding: 1% 4%;
 }
 
+/* --FOOTER-- */
+footer {
+	font-family: "Garamond";
+	color: #4d1a4b;
+	background: rgba(255,255,255,0.2);
+	width: 80%;
+	margin: 2% auto;
+	padding: 1%;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
 
+footer ul {
+	flex: 22%;
+}
+
+footer ul:first-child {
+	flex: 34%;
+}
+footer ul li {
+	margin-bottom: 3%;
+}
+
+footer ul li:first-child {
+	margin-bottom: 4%;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+footer p {
+	flex: 100%;
+	font-size: 11px;
+	text-align: center;
+	border-top: 2px solid #4d1a4b;
+	padding-top: 1%;
+	border-radius: 50%;
+}
+
+footer ul li img {
+	width: 25%;
+	margin-bottom: -5%;
+}
+
+footer a {
+	transition: 0.5s;
+	text-transform: none;
+	font-weight: bold;
+}
+
+footer a:hover {
+	color: #fff;
+}
+
+footer ul .social_media .fa {
+	font-size: 18px;
+	text-align: center;
+	width: 36px;
+	height: 36px;
+	padding-top: 10px;
+	border-radius: 50%;
+	background: #fff;
+	margin-right: 8%;
+	margin-top: 3%;
+	margin-bottom: 8%;
+	box-shadow: 0px 0px 5px 5px #fff;
+	animation: shake-bottom 4s ease infinite both;
+}
+
+footer ul .social_media a:first-child {
+	color: #3b5998;
+}
+
+footer ul .social_media a:nth-child(2) {
+	color: #c4302b;
+}
+
+footer ul .social_media a:last-child {
+	color: #c8232c;
+}
+
+footer ul .social_media a:hover {
+	color: #fff
+}
+
+footer ul .social_media .fa-facebook:hover {
+	background: #3b5998;
+}
+
+footer ul .social_media .fa-youtube-play:hover {
+	background: #c4302b;
+}
+
+footer ul .social_media .fa-pinterest:hover {
+	background: #c8232c;
+}
 
 /* --RWD-- */
 @media (max-width: 1400px) {
@@ -468,6 +564,9 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	.span_hide {
 		display: none;
 	}
+	footer p {
+		padding-top: 4%;
+	}
 }
 
 @media (max-width: 600px) {
@@ -534,5 +633,8 @@ nav .hamburger .menu .openned span:nth-child(2) {
 		font-size: 10px;
 		padding: 7px 2px;
 		width: 80px;
+	}
+	footer p {
+		padding-top: 8%;
 	}
 }
