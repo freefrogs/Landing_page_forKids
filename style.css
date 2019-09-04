@@ -66,6 +66,10 @@ body {
 
 }
 
+ul {
+	list-style: none;
+}
+
 a {
 	text-decoration: none;
 	text-transform: uppercase;
@@ -96,10 +100,6 @@ nav {
 	box-shadow: 0px 0px 20px 0px rgba(72,34,71,0.57);
 	border-radius: 20px 20px 0 0;
 	background: linear-gradient(172deg, #c95392 25%, #9ed2cf 55%);
-}
-
-nav ul {
-	list-style: none;
 }
 
 nav .main_menu {
@@ -194,13 +194,10 @@ nav .hamburger .menu .open {
 	display: block;
 	cursor: pointer;
 	transition: opacity 0.2s linear;
-	opacity: 0.5;
 	border-bottom-left-radius: 100%;
 }
 
-nav .hamburger .menu .open:hover {
-	opacity: 0.9;
-}
+
 
 nav .hamburger span {
 	display: block;
@@ -298,12 +295,19 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	transition-duration: 0.6s;
 	background: #9ed2cf;
 	box-shadow: 0px 23px 20px 0px rgba(72,34,71,0.6);
-
 	margin: -10px auto 0;
 	width: 80%;
 	z-index: 2;
 	position: relative;
 	letter-spacing: 2px;
+}
+
+.hero_hide {
+	display: none;
+}
+
+.hero_hide .T_btn_container {
+	display: none;
 }
 
 .hero h2 {
@@ -315,17 +319,42 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	font-weight: bold;
 }
 
-.hero_small {
-	margin-bottom: 2%;
+.main_hero {
 	display: flex;
+	background-image: url("img/hero_main.png");
+}
+
+.fairy_tales_hero {
+	background-image: url("img/hero_bajki.png");
+}
+
+.games_hero {
+	background-image: url("img/hero_gry.png");
+}
+
+.drawings_hero {
+	background-image: url("img/hero_rysowanki.png");
+}
+
+.shop_hero {
+	background-image: url("img/hero_sklep.png");
+}
+
+.hero_small {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 95%;
+	padding-bottom: 2%;
+	margin: 0 2.5% 2%;
 }
 
-.hero_small .T_btn_container {
-	position: relative;
+.main_hero .T_btn_container {
 	display: flex;
+}
+
+.T_btn_container {
+	position: relative;
 	justify-content: space-around;
 	align-items: center;
 }
@@ -359,11 +388,6 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	box-shadow: 0 0 10px 5px #fff;
 }
 
-.main_hero {
-	width: 95%;
-	margin: 0 2.5%;
-}
-
 .hero img {
 	width: 20%;
 	flex: 2;
@@ -376,12 +400,11 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	padding: 1% 4%;
 }
 
+
+
 /* --RWD-- */
 @media (max-width: 1400px) {
-	nav {
-		width: 85%;
-	}
-	.hero {
+	nav, .hero, footer {
 		width: 85%;
 	}
 }
@@ -438,6 +461,12 @@ nav .hamburger .menu .openned span:nth-child(2) {
 	}
 	.hero_small .T_btn_container .T_button {
 		margin-bottom: 2%;
+	}
+	.hero_hide .T_btn_container {
+		display: flex;
+	}
+	.span_hide {
+		display: none;
 	}
 }
 
