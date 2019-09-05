@@ -1,7 +1,13 @@
 
 * {
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
 }
+
+/*:focus, *:active {
+	outline: 0 !important;
+}*/
 
 /* --KEYFRAMES-- */
 
@@ -80,7 +86,7 @@
 
 
 body {
-	font-family: 'Irish Grover', "Palatino Linotype", cursive;
+	font-family: 'Irish Grover', "Palatino Linotype", serif;
 	margin: 0;
 	padding: 0;
 	animation: color-change-4x 10s linear infinite alternate both;
@@ -222,10 +228,6 @@ nav .hamburger .menu {
 	height: 80px;
 	border-bottom-left-radius: 100%;
 }
-
-/*nav .hamburger:active:focus, nav .hamburger .menu:active:focus, nav .hamburger .menu .open:active:focus, nav .hamburger span:active:focus, nav .hamburger .menu .open span .sub-menu:active:focus, nav .hamburger .menu .open span .sub-menu li:active:focus {
-	outline: 0;
-}*/
 
 nav .hamburger .menu .open {
 	background: #fff;
