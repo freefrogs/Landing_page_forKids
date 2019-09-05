@@ -41,18 +41,28 @@ window.onload = function() {
 	}
 
 	// Hamburger menu
+	var pointer_1 = document.getElementById("pointer_1");
+	var pointer_2 = document.getElementById("pointer_2");
 	$(document).delegate('.open', 'click', function(event){
 		$(this).addClass('openned');
+		pointer_1.style.display = 'none';
+		pointer_2.style.display = 'none';
 		event.stopPropagation();
 	})
 	$(document).delegate('body', 'click', function(event) {
 		$('.open').removeClass('openned');
+		setTimeout(pointer_come_back, 1000);
 	})
 	$(document).delegate('.cls', 'click', function(event){
 		$('.open').removeClass('openned');
+		setTimeout(pointer_come_back, 1000);
 		event.stopPropagation();
 	});
 
+	function pointer_come_back() {
+		pointer_1.style.display = 'block';
+		pointer_2.style.display = 'block';
+	}
 	// Hero content change
 	/*var fairy_tales = $('.fairy_tales');
 	fairy_tales.on('mouseenter', function() {
